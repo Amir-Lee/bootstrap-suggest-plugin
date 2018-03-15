@@ -591,7 +591,7 @@
         return $iClear.css({
             position: 'absolute',
             top: 12,
-            right: options.showBtn ? ($input.next('.input-group-btn').width() || 33) + 2 : 12,
+            right: options.showBtn ? Math.max(($input.next('.input-group-btn').width() || 33), 33) + 2 : 12,//在被隐藏的情况下，$input.next('.input-group-btn').width()宽度可能为1
             zIndex: 4,
             cursor: 'pointer',
             fontSize: 12
